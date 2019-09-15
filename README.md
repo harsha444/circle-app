@@ -54,5 +54,5 @@ The project currently has APIs for
 4) Getting list of all blogs
 > Endpoint: `http://172.21.0.3:8000/api/blogs/blog/`
 
-5) Getting the common blogs of first level friends of users of a blog
+5) Getting the blogs of first level friends of users of a blog
 > Endpoint: `http://127.0.0.1:8000/api/blogs/common/<blog_id>/`
