@@ -2,6 +2,7 @@ FROM python:3.7-alpine
 MAINTAINER Sri Harsha
 
 ENV PYTHONUNBUFFERED 1
+EXPOSE 8000
 
 COPY ./requirements.txt /requirements.txt
 RUN apk add --update --no-cache postgresql-client

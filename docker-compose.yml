@@ -1,26 +1,38 @@
-version: "3"
-
+version: '3'
 services:
+  db:
+    image: postgres:10.3-alpine
+    environment:
+      POSTGRES_DB: "app"
+      POSTGRES_USER: "deploy"
+      POSTGRES_PASSWORD: "deploy"
+      POSTGRES_HOST: "0.0.0.0"
+
   app:
     build:
       context: .
     ports:
-      - 8000:8000
+      - "8000:8000"
     volumes:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
-    environment:
-      - DB_HOST=db
-      - DB_NAME=app
-      - DB_USER=postgres
-      - DB_PASS=supersecretpassword
     depends_on:
       - db
-
-  db:
-    image: postgres:10-alphine
     environment:
-      - POSTGRES_DB=app
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=supersecretpassword
+      DB_HOST: db
+      PYTHONUNBUFFERED: "0"
+      DB_NAME: "app"
+      DB_USER: "deploy"
+      DB_PASS: "deploy"
+      DJANGO_DEBUG_ENABLED: "True"
+#
+#  db:
+#    image: postgres:10.3-alphine
+#    ports:
+#      - "5432:5432"
+#    environment:
+#      - POSTGRES_DB="app"
+#      - POSTGRES_USER="postgres"
+#      - POSTGRES_PASSWORD="password"
+#      - POSTGRES_HOST="0.0.0.0"
