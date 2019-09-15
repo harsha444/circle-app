@@ -4,9 +4,9 @@ To run the app, use the following steps
 `git clone https://github.com/harsha444/circle-app.git`
 
 
-cd circle-app/
+`cd circle-app/`
 
-docker-compose build
+`docker-compose build`
 
 ### To run migrations
 ```
