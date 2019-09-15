@@ -45,14 +45,14 @@ Now the server will be live on either 127.0.0.1:8000 or the inet addr:8000 that 
 # APIs
 The project currently has APIs for
 1) Creating a user, Updating a user, Deleting a user and applying a patch on user
-Endpoint: `http://127.0.0.1:8000/api/users/profile/<user_profile_id>`
+> Endpoint: `http://127.0.0.1:8000/api/users/profile/<user_profile_id>`
 2) Getting a list of users
-Endpoint: `http://127.0.0.1:8000/api/users/profile/>`
+> Endpoint: `http://127.0.0.1:8000/api/users/profile/>`
 
 3) Creating a Blog, Updating a Blog, Deleting a Blog and applying a patch on Blog
-Endpoint: `http://172.21.0.3:8000/api/blogs/blog/<blog_id>`
+> Endpoint: `http://172.21.0.3:8000/api/blogs/blog/<blog_id>`
 4) Getting list of all blogs
-Endpoint: `http://172.21.0.3:8000/api/blogs/blog/`
+> Endpoint: `http://172.21.0.3:8000/api/blogs/blog/`
 
 5) Getting the common blogs of first level friends of users of a blog
-`http://127.0.0.1:8000/api/blogs/common/<blog_id>/`
+> Endpoint: `http://127.0.0.1:8000/api/blogs/common/<blog_id>/`
